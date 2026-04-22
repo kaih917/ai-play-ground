@@ -1,0 +1,4 @@
+polars==1.38.1
+torch
+transformers
+protobuf

@@ -5,6 +5,12 @@ __pycache__/
 venv/
 .env
 .venv
-.DS_Store
 .idea/
 .vscode/
+Lib/
+build/
+Scripts/
+share/
+Include/
+.github/
+pyvenv.cfg
