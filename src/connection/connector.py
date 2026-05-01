@@ -12,11 +12,15 @@ class Connector:
             base_url=BasicConfig.API_URL)
 
     def chat(self, messages):
-        response = self.client.chat.completions.create(
-            model="deepseek-chat",
-            messages=messages,
-            stream=False
-        )
-        return response.choices[0].message.content
+        try:
+            response = self.client.chat.completions.create(
+                model="deepseek-chat",
+                messages=messages,
+                stream=False
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"Error occurred: {e}")
+            return "An error occurred while processing your request."
 
 connector = Connector()
