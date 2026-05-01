@@ -9,7 +9,7 @@ class Connector:
     def __init__(self):
         self.client = OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
-            base_url=BasicConfig.BASE_URL)
+            base_url=BasicConfig.API_URL)
 
     def chat(self, messages):
         response = self.client.chat.completions.create(
