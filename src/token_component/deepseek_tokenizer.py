@@ -12,5 +12,11 @@ class DeepSeekTokenizer:
 
     def encode(self, text):
         return self.tokenizer.encode(text)
+    
+    def token_estimate(self, chart_contest):
+        total_tokens = 0
+        for message in chart_contest:
+            total_tokens += len(self.tokenizer.encode(message["content"]))
+        return total_tokens
 
 tokenizer = DeepSeekTokenizer()
