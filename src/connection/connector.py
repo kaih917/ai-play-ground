@@ -1,15 +1,15 @@
 # Please install OpenAI SDK first: `pip3 install openai`
 import os
 from openai import OpenAI
-from config import Config
+from config import BasicConfig
 
-os.environ["OPENAI_API_KEY"] = Config.API_TOKEN
+os.environ["OPENAI_API_KEY"] = BasicConfig.API_TOKEN
 
 class Connector:
     def __init__(self):
         self.client = OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
-            base_url=Config.BASE_URL)
+            base_url=BasicConfig.BASE_URL)
 
     def chat(self, messages):
         response = self.client.chat.completions.create(
