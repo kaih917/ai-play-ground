@@ -15,7 +15,7 @@ if __name__ == "__main__":
     tokenizer = DeepSeekTokenizer()
     print("Token estimate:", tokenizer.token_estimate(chat_contest.contest))
 
-    response = connector.chat(chat_contest.contest)
+    response = connector.chat(chat_contest.contest, False, 1)
     print(response)
 
 
