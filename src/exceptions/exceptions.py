@@ -13,4 +13,5 @@ class ApiException(Exception):
         self.status_code = status_code
         self.message = message or status_codes.get(status_code, "Unknown Error")
         print('test commit 1')
+        print('test commit 2')
         super().__init__(self.message)
