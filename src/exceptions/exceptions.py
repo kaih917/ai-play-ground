@@ -13,3 +13,6 @@ class ApiException(Exception):
         self.status_code = status_code
         self.message = message or status_codes.get(status_code, "Unknown Error")
         super().__init__(self.message)
+
+        print(f"API Exception: {self.status_code} - {self.message}")
+        
