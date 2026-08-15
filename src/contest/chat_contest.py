@@ -5,3 +5,4 @@ class ChatContest:
 
     def appender(self, user_input):
         self.contest.append({"role": "user", "content": user_input})
+        print(f"User input added: {user_input}")
